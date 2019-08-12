@@ -1,0 +1,47 @@
+{
+    "id": "approveentryteched2019",
+    "name": "approveEntryTechEd2019",
+    "revision": "1.0",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "catalog",
+            "type": "section",
+            "title": "Catalog",
+            "content": [
+                {
+                    "id": "label",
+                    "type": "string",
+                    "label": "Description",
+                    "readOnly": true,
+                    "value": "${context.product}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "price",
+                    "type": "float",
+                    "label": "Price",
+                    "readOnly": true,
+                    "value": "${context.price}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approved for TechEd 2019",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Try Again ... Sorry ! ",
+            "decisionType": "negative"
+        }
+    ]
+}
